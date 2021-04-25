@@ -1,0 +1,147 @@
+.app {
+  display: flex;
+  width: 95%;
+  flex-direction: column;
+  margin: 15px auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #3e3e3e;
+}
+
+.today-weather-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 150px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(46, 122, 65, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  border-radius: 5px;
+}
+
+.weather-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-image div {
+  align-self: center;
+  position: absolute;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.nextdays-weather-container {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  flex-direction: column;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 201, 45, 1) 100%
+  );
+  border-radius: 20px;
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+}
+
+.main-temp {
+  font-size: 70px;
+  display: flex;
+}
+
+.main-temp-degree {
+  margin-bottom: 20px;
+}
+
+.main-temp-loc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.main-temp-loc-status {
+  align-self: center;
+  font-family: cursive;
+  font-style: italic;
+  opacity: 0.6;
+}
+
+.main-temp-measure {
+  margin-bottom: 46px;
+  margin-left: 10px;
+  font-size: 16px;
+  align-self: center;
+}
+
+.main-temp-extras {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+.right-container {
+  flex-direction: column;
+  align-self: center;
+  display: flex;
+  margin-left: auto;
+}
+
+.right-container div {
+  align-self: flex-end;
+  margin-right: 40px;
+}
+
+.details-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px 15px;
+}
+
+.date-details {
+  margin: 15px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(46, 122, 65, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+  height: 26px;
+  line-height: 26px;
+}
+
+.weather-daily-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 480px) {
+  .today-weather-container {
+    height: 180px;
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+
+  .main-temp-extras {
+    margin: 0;
+    padding: 20px;
+  }
+
+  .main-temp-loc {
+    align-items: flex-start;
+  }
+}
