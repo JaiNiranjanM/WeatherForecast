@@ -20,7 +20,7 @@ In the project directory, you can run:
 
 ### `npm install`
 
-Clone the repository and do the initial setup
+Clone the repository and do the initial setup.
 
 ### `npm start`
 
