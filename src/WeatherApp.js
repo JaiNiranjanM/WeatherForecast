@@ -19,13 +19,11 @@ function WeatherApp() {
       headers: {
         "Referrer-Policy": "origin-when-cross-origin",
         "Access-Control-Allow-Origin": "https://api.openweathermap.org",
-        "Access-Control-Allow-Methods": "POST",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization",
       },
       mode: "no-cors",
     };
     fetch(
-      //api.openweathermap.org/data/2.5/weather?units=metric&q=" +
+      "https://api.openweathermap.org/data/2.5/weather?units=metric&q=" +
         LOCATION +
         WEATHER_API_KEY,
       options
@@ -45,7 +43,7 @@ function WeatherApp() {
       )
       .catch(() => setCurrentWeatherData(WeatherData.weatherData));
     fetch(
-      "//api.openweathermap.org/data/2.5/forecast?units=metric&" +
+      "https://api.openweathermap.org/data/2.5/forecast?units=metric&" +
         LOCATION +
         "&id=" +
         WEATHER_API_KEY,
