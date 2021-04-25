@@ -1,22 +1,26 @@
 # Features
 
-### `Current Weather Details`
+### `1. Current Weather Details`
 
-### `5days Weather Forcast`
+### `2. 5days Weather Forcast`
 
-### `Responsive throught all devices`
+### `3. Responsive throught all devices`
 
-### `Supports WEB, TABLET, MOBILE devices`
+### `4. Supports WEB, TABLET, MOBILE devices`
 
-### `Loads the UI from the MOCK data when API calls fails`
+### `5. Loads the UI from the MOCK data when API calls fails`
 
-### `User friendly - with respective weather icons`
+### `6. User friendly - with respective weather icons`
 
-### `All Browsers compatible - Tested in Chrome, Edge, FireFox`
+### `7. All Browsers compatible - Tested in Chrome, Edge, FireFox`
 
-## Available Scripts
+## Start Your Application
 
 In the project directory, you can run:
+
+### `npm install`
+
+Clone the repository and do the initial setup
 
 ### `npm start`
 
@@ -33,14 +37,14 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## Could be done with more time
 
-### `Fetch and Load with next 5days of weather forecast on right click of Right Arrow`
+### `-Fetch / Load with next 5days of weather forecast on click of Right Arrow`
 
-### `Fetch and Load with previous 5days of weather forecast on left click of Right Arrow`
+### `-Fetch / Load with previous 5days of weather forecast on click of Left Arrow`
 
-### `Dynamically update Celsius and Farenheit data on toggle of a button`
+### `-Dynamically update Celsius and Farenheit data on toggle of a button`
 
-### `Add more details on the UI`
+### `-Add more details on the UI`
 
-### `Add Animation to look flashy`
+### `-Add Animation to look flashy`
 
-### `Add more icons on the UI with respective to the weather details`
+### `-Add more icons on the UI with respective to the weather details`
