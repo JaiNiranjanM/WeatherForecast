@@ -2,7 +2,7 @@
 
 ### `1. Current Weather Details`
 
-### `2. 5days Weather Forcast`
+### `2. 5days Weather Forecast`
 
 ### `3. Responsive throught all devices`
 
