@@ -16,7 +16,12 @@ function WeatherApp() {
 
   useEffect(() => {
     const options = {
-      headers: { "Access-Control-Allow-Origin": "*" },
+      headers: {
+        "Referrer-Policy": "origin-when-cross-origin",
+        "Access-Control-Allow-Origin": "http://api.openweathermap.org",
+        "Access-Control-Allow-Methods": "POST",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
       mode: "no-cors",
     };
     fetch(
