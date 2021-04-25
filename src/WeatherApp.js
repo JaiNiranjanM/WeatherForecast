@@ -25,6 +25,7 @@ function WeatherApp() {
     fetch(
       "https://api.openweathermap.org/data/2.5/weather?units=metric&q=" +
         LOCATION +
+        "&appid=" +
         WEATHER_API_KEY,
       options
     )
@@ -43,9 +44,9 @@ function WeatherApp() {
       )
       .catch(() => setCurrentWeatherData(WeatherData.weatherData));
     fetch(
-      "https://api.openweathermap.org/data/2.5/forecast?units=metric&" +
+      "https://api.openweathermap.org/data/2.5/forecast?units=metric&q=" +
         LOCATION +
-        "&id=" +
+        "&appid=" +
         WEATHER_API_KEY,
       options
     )
