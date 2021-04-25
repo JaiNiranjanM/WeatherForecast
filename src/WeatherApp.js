@@ -15,10 +15,15 @@ function WeatherApp() {
   const LOCATION = "bengaluru,karnataka,560093";
 
   useEffect(() => {
+    const options = {
+      headers: { "Access-Control-Allow-Origin": "*" },
+      mode: "no-cors",
+    };
     fetch(
       "http://api.openweathermap.org/data/2.5/weather?units=metric&q=" +
         LOCATION +
-        WEATHER_API_KEY
+        WEATHER_API_KEY,
+      options
     )
       .then((res) => res.json())
       .then(
@@ -38,7 +43,8 @@ function WeatherApp() {
       "http://api.openweathermap.org/data/2.5/forecast?units=metric&" +
         LOCATION +
         "&id=" +
-        WEATHER_API_KEY
+        WEATHER_API_KEY,
+      options
     )
       .then((res) => res.json())
       .then(
