@@ -127,6 +127,7 @@
 .weather-daily-details {
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 @media screen and (max-width: 480px) {
@@ -143,5 +144,9 @@
 
   .main-temp-loc {
     align-items: flex-start;
+  }
+  
+  .weather-daily-details {
+    justify-content: space-around;
   }
 }
