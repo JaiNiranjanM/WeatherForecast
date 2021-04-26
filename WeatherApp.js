@@ -18,23 +18,24 @@ function WeatherApp() {
     const options = {
       headers: {
         "Referrer-Policy": "origin-when-cross-origin",
-        "Access-Control-Allow-Origin": "http://api.openweathermap.org",
-        "Access-Control-Allow-Methods": "POST",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Access-Control-Allow-Origin": "https://api.openweathermap.org",
       },
       mode: "no-cors",
     };
     fetch(
-      "http://api.openweathermap.org/data/2.5/weather?units=metric&q=" +
-        LOCATION +
-        WEATHER_API_KEY,
-      options
+      "http://api.openweathermap.org/data/2.5/weather?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb"
     )
       .then((res) => res.json())
       .then(
         (result) => {
           setCurrentWeatherData(result);
-          if (result && result.cod === ("400" || "500" || "501")) {
+          if (
+            result &&
+            (result.cod === 400 ||
+              result.cod === 401 ||
+              result.cod === 500 ||
+              result.cod === 501)
+          ) {
             setCurrentWeatherData(WeatherData.weatherData);
           }
         },
@@ -45,18 +46,20 @@ function WeatherApp() {
       )
       .catch(() => setCurrentWeatherData(WeatherData.weatherData));
     fetch(
-      "http://api.openweathermap.org/data/2.5/forecast?units=metric&" +
-        LOCATION +
-        "&id=" +
-        WEATHER_API_KEY,
-      options
+      "http://api.openweathermap.org/data/2.5/forecast?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb"
     )
       .then((res) => res.json())
       .then(
         (result) => {
           setWeatherForecastData(result);
           getForcastData(result);
-          if (result && result.cod === ("400" || "500" || "501")) {
+          if (
+            result &&
+            (result.cod === 400 ||
+              result.cod === 401 ||
+              result.cod === 500 ||
+              result.cod === 501)
+          ) {
             setWeatherForecastData(WeatherData.forecastData);
             getForcastData(WeatherData && WeatherData.forecastData);
           }
@@ -66,7 +69,11 @@ function WeatherApp() {
           setWeatherForecastData(WeatherData.forecastData);
           getForcastData(WeatherData && WeatherData.forecastData);
         }
-      );
+      )
+      .catch(() => {
+        setWeatherForecastData(WeatherData.forecastData);
+        getForcastData(WeatherData && WeatherData.forecastData);
+      });
 
     setCountryCode(CountryCode);
   }, []);
