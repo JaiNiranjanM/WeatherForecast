@@ -23,7 +23,7 @@ function WeatherApp() {
       mode: "no-cors",
     };
     fetch(
-      "http://api.openweathermap.org/data/2.5/weather?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb"
+      "http://api.openweathermap.org/data/2.5/weather?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb", options
     )
       .then((res) => res.json())
       .then(
@@ -46,7 +46,7 @@ function WeatherApp() {
       )
       .catch(() => setCurrentWeatherData(WeatherData.weatherData));
     fetch(
-      "http://api.openweathermap.org/data/2.5/forecast?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb"
+      "http://api.openweathermap.org/data/2.5/forecast?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb", options
     )
       .then((res) => res.json())
       .then(
