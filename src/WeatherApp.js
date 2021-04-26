@@ -167,11 +167,6 @@ function WeatherApp() {
 
   return (
     <div className="app">
-      {error ? (
-        <div>API ERROR - Fetching the data from STATIC data</div>
-      ) : (
-        <div></div>
-      )}
       <div className="today-weather-container">
         <div className="weather-image">
           <img
@@ -214,6 +209,11 @@ function WeatherApp() {
             );
           })}
       </div>
+      {error ? (
+        <div>API ERROR - Fetching the data from STATIC data</div>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 }
