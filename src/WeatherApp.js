@@ -23,7 +23,10 @@ function WeatherApp() {
       mode: "no-cors",
     };
     fetch(
-      "https://api.openweathermap.org/data/2.5/weather?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb", options
+      window.location.hostname === "localhost"
+        ? "http://api.openweathermap.org/data/2.5/weather?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb"
+        : "https://api.openweathermap.org/data/2.5/weather?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb",
+      window.location.hostname === "localhost" ? {} : options
     )
       .then((res) => res.json())
       .then(
@@ -46,7 +49,10 @@ function WeatherApp() {
       )
       .catch(() => setCurrentWeatherData(WeatherData.weatherData));
     fetch(
-      "https://api.openweathermap.org/data/2.5/forecast?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb", options
+      window.location.hostname === "localhost"
+        ? "http://api.openweathermap.org/data/2.5/forecast?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb"
+        : "https://api.openweathermap.org/data/2.5/forecast?q=bengaluru,karnataka,560093&units=metric&appid=532d5fa2a06b1cc30182238e6835eebb",
+      window.location.hostname === "localhost" ? {} : options
     )
       .then((res) => res.json())
       .then(
