@@ -168,7 +168,7 @@ function WeatherApp() {
   return (
     <div className="app">
       {error ? (
-        <div>API ERROR - Fetching the data from STATIC request</div>
+        <div>API ERROR - Fetching the data from STATIC data</div>
       ) : (
         <div></div>
       )}
