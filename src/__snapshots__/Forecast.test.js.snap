@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Forecast Component should render Forecast component 1`] = `
+Array [
+  <div
+    className="next-date-details-cont"
+  >
+    <div
+      className="date-details"
+    >
+      undefined NaN
+    </div>
+    <div
+      className="weather-daily-details"
+    />
+  </div>,
+]
+`;

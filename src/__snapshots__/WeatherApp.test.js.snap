@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherApp Component should render WeatherApp component 1`] = `
+Array [
+  <div
+    className="app"
+  >
+    <div />
+    <div
+      className="today-weather-container"
+    >
+      <div
+        className="weather-image"
+      >
+        <img
+          alt="status-logo"
+          src=""
+        />
+        <div />
+      </div>
+      <div
+        className="main-temp"
+      >
+        <div
+          className="main-temp-degree"
+        />
+        <div
+          className="main-temp-measure"
+        >
+          °C
+        </div>
+      </div>
+      <div
+        className="main-temp-extras"
+      >
+        <div>
+          Humidity: 
+          %
+        </div>
+        <div>
+          Pressure: 
+           Pa
+        </div>
+        <div>
+          Wind: 
+           mph
+        </div>
+      </div>
+      <div
+        className="main-temp-loc"
+      >
+        <div>
+          , 
+        </div>
+        <div
+          className="main-temp-loc-status"
+        />
+      </div>
+    </div>
+    <div
+      className="nextdays-weather-container"
+    />
+  </div>,
+]
+`;
