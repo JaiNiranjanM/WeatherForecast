@@ -5,7 +5,6 @@ Array [
   <div
     className="app"
   >
-    <div />
     <div
       className="today-weather-container"
     >
@@ -60,6 +59,7 @@ Array [
     <div
       className="nextdays-weather-container"
     />
+    <div />
   </div>,
 ]
 `;
